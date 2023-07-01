@@ -111,4 +111,5 @@ class Directory : public DirectoryEntry {
           static_cast<traverse_func>(&Directory::print_traverse),
           static_cast<action_func>(&DirectoryEntry::print_action));
     }
-  };
+  }
+};
