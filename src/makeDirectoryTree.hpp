@@ -7,9 +7,7 @@
 
 #pragma once
 
-#include "FileSystem.hpp"
 #include <string_view>
+#include "FileSystem.hpp"
 
-std::shared_ptr<Directory> make_directory_tree(const std::string_view& dirPath)
-;
-
+std::shared_ptr<Directory> make_directory_tree(const std::string_view& dirPath);
