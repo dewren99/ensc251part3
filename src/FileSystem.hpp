@@ -52,7 +52,7 @@ public:
         swap(a.m_name, b.m_name);
     }
 
-	void set_name(const std::string_view& name){ /* ***** Complete this member function ***** */ }
+	void set_name(const std::string_view& name){ m_name = name; }
 	const std::string & get_name() { return m_name; }
 
 	virtual void print_action() = 0;
