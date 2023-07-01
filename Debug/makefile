@@ -38,7 +38,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Part3-withTesting
+BUILD_ARTIFACT_NAME := Part3-withTestingFixed
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -49,19 +49,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 all: main-build
 
 # Main-build Target
-main-build: Part3-withTesting
+main-build: Part3-withTestingFixed
 
 # Tool invocations
-Part3-withTesting: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+Part3-withTestingFixed: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/usr/lib/x86_64-linux-gnu" -o "Part3-withTesting" $(OBJS) $(USER_OBJS) $(LIBS) -l"boost_unit_test_framework" -l"boost_system" -l"boost_filesystem"
+	g++ -L"/usr/lib/x86_64-linux-gnu" -o "Part3-withTestingFixed" $(OBJS) $(USER_OBJS) $(LIBS) -l"boost_unit_test_framework" -l"boost_system" -l"boost_filesystem"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Part3-withTesting
+	-$(RM) Part3-withTestingFixed
 	-@echo ' '
 
 .PHONY: all clean dependents main-build
