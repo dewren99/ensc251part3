@@ -72,6 +72,8 @@ class TreeNode {
     // ***** this needs work *****
     if (nodeToCopy.childSPVector.size())
       add_childP(nodeToCopy.childSPVector[0]->clone());
+    if (nodeToCopy.childSPVector.size())
+      add_childP(nodeToCopy.childSPVector[1]->clone());
   }
 
   friend void swap(TreeNode& first,
