@@ -13,11 +13,11 @@ Destroying TreeNode with 2 children.
 Destroying TreeNode with 0 children.
 Destroying TreeNode with 0 children.
 Destroying TreeNode with 0 children.
+          Lectures	| 4
         bitmap.bmp	F
            Course1	| 0
            Course2	| 0
   spreadsheet.xlsx	F
-          Lectures	| 4
 Destroying TreeNode with 4 children.
 Destroying TreeNode with 0 children.
 Destroying TreeNode with 0 children.
