@@ -1,22 +1,18 @@
 //============================================================================
 //
-//% Student Name 1: student1
-//% Student 1 #: 123456781
-//% Student 1 userid (email): stu1 (stu1@sfu.ca)
-//
-//% Student Name 2: student2
-//% Student 2 #: 123456782
-//% Student 2 userid (email): stu2 (stu2@sfu.ca)
+//% Student Name 1: Deniz Evrendilek
+//% Student 1 #: 301340591
+//% Student 1 userid (email): devrendi (devrendi@sfu.ca)
 //
 //% Below, edit to list any people who helped you with the code in this file,
 //%      or put ‘none’ if nobody helped (the two of) you.
 //
-// Helpers: _everybody helped us/me with the assignment (list names or put ‘none’)__
+// Helpers: none
 //
 // Also, list any resources beyond the course textbook and the course pages on Piazza
 // that you used in making your submission.
 //
-// Resources:  ___________
+// Resources:  none
 //
 //%% Instructions:
 //% * Put your name(s), student number(s), userid(s) in the above section.
