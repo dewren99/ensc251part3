@@ -86,9 +86,29 @@ class Directory : public DirectoryEntry {
   void print_traverse() {
     // ***** this needs work *****
     // ***** encode the rules in the instructions
-
-    traverse_children_pre_order(
-        static_cast<traverse_func>(&Directory::print_traverse),
-        static_cast<action_func>(&DirectoryEntry::print_action));
-  }
-};
+    /*
+    Modify print_traverse so that it obeys the
+    following rules:
+    a. If a given node has two children, then traverse at that point using an
+    in-order traversal (i.e. given node processed in-between processing the
+    children’s subtrees)
+    b. If the node has more than two children, then
+    traverse at that point using a pre- order traversal (i.e. given node
+    processed before processing the children’s subtrees)
+    c. If the node has less than two children, then use post-order traversal
+    at that point
+    */
+    if (this->childSPVector.size() == 2) {
+      this->traverse_children_in_order(
+          static_cast<traverse_func>(&Directory::print_traverse),
+          static_cast<action_func>(&DirectoryEntry::print_action));
+    } else if (this->childSPVector.size() > 2) {
+      this->traverse_children_pre_order(
+          static_cast<traverse_func>(&Directory::print_traverse),
+          static_cast<action_func>(&DirectoryEntry::print_action));
+    } else {
+      this->traverse_children_post_order(
+          static_cast<traverse_func>(&Directory::print_traverse),
+          static_cast<action_func>(&DirectoryEntry::print_action));
+    }
+  };
