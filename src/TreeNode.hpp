@@ -70,10 +70,12 @@ class TreeNode {
 
   TreeNode(const TreeNode& nodeToCopy) {
     // ***** this needs work *****
-    if (nodeToCopy.childSPVector.size())
-      add_childP(nodeToCopy.childSPVector[0]->clone());
-    if (nodeToCopy.childSPVector.size())
-      add_childP(nodeToCopy.childSPVector[1]->clone());
+    if (nodeToCopy.childSPVector.size() == 0) {
+      return;
+    }
+    for (auto child : nodeToCopy.childSPVector) {
+      childSPVector.push_back(child->clone());
+    }
   }
 
   friend void swap(TreeNode& first,
